@@ -9,7 +9,7 @@ import types.States
 suspend fun startStatistics(db: Database) {
     val objectTable = ObjectTable(db)
     while (true) {
-        var birth: Date = Date("00.00.0000")
+        var birth = Date("00.00.0000")
         while (true) {
             println("Birthday (yyyy-mm-dd): ")
             val input = readln()
@@ -29,7 +29,7 @@ suspend fun startStatistics(db: Database) {
             }
         }
         val birthday = birth
-        println("Date of questionnaire (timestamp): ")
+        println("Date of questionnaire: ")
         val dateOfQuestionnaire = readlnOrNull()?.toLong() ?: break
         println("Favorite lesson: ")
         val favoriteLesson = readLine()
